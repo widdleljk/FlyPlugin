@@ -16,11 +16,11 @@ public class FlyCmd implements CommandExecutor {
         if (sender instanceof Player) {
             Player player = (Player) sender;
             if (args.length == 0) {
-                flyMethod(player);
+                toggleFly(player);
             } else if(args.length == 1) {
                 if (player.hasPermission("flyvanish.givefly")) {
                     Player target = Bukkit.getPlayer(args[0]);
-                    flyMethod(target);
+                    toggleFly(target);
                 } else {
                     player.sendMessage(ChatColor.RED + "You don't have the required permissions to make someone else fly!");
                 }
@@ -29,7 +29,7 @@ public class FlyCmd implements CommandExecutor {
         return true;
     }
 
-    private void flyMethod(Player player) {
+    private void toggleFly(Player player) {
         if (player.hasPermission("flyvanish.fly")) {
             if (list_of_flying_players.contains(player)) {
                 list_of_flying_players.remove(player);
@@ -40,6 +40,8 @@ public class FlyCmd implements CommandExecutor {
                 player.setAllowFlight(true);
                 player.sendMessage(ChatColor.AQUA + "Fly enabled!");
             }
-        }
+        } else if(!player.hasPermission("flyvanish.fly")) {
+		player.sendMessage(ChatColor.RED + "You don't have the required permissions to use this command");
+	}
     }
 }
