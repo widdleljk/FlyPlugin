@@ -1,3 +1,5 @@
 # FlyPlugin
 
-This project was made for a fly and vanish plugin but I changed it to a fly plugin.
+Commands:
+`/fly` - needs `flyvanish.fly`
+`/fly [name]` needs `flyvanish.givefly`
