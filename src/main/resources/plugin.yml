@@ -1,14 +1,12 @@
-name: flyvanish
+name: FlyCommand
 version: '${project.version}'
-main: me.skycraftalfieedyvean.flyvanish.Flyvanish
+main: me.widdleljk.flycommand.FlyCommand
 commands:
   fly:
     description: "Be able to fly"
     usage: "/fly"
     permission: "flyvanish.fly"
     permission-message: "You don't have the required permissions!"
-  vanish:
-    description: "Vanishes you from the world!"
 permissions:
   flyvanish.fly:
     default: op
@@ -16,6 +14,3 @@ permissions:
   flyvanish.givefly:
     default: op
     description: "Able to give other people fly"
-  flyvanish.vanish:
-    default: op
-    description: "Able to go invisible"

@@ -1,4 +1,4 @@
-package me.skycraftalfieedyvean.flyvanish.commands;
+package me.widdleljk.flycommand.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 
-public class FlyCommand implements CommandExecutor {
+public class FlyCmd implements CommandExecutor {
     private ArrayList<Player> list_of_flying_players = new ArrayList<>();
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
